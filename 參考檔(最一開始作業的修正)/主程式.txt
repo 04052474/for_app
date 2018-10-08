@@ -1,0 +1,97 @@
+祘Α
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private EditText meditscore;
+    private Button mbutton;
+    private TextView msuggestion;
+    private Spinner mspngrade;
+    private String grade;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        meditscore=(EditText)findViewById(R.id.editscore);
+        mbutton=(Button)findViewById(R.id.button);
+        msuggestion=(TextView)findViewById(R.id.textView3);
+
+        mspngrade=(Spinner)findViewById(R.id.spngrade);
+        mspngrade.setOnItemSelectedListener(spngradeon);
+
+        mbutton.setOnClickListener(buttonOnClick);
+    }
+    private View.OnClickListener buttonOnClick=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int score=Integer.parseInt(meditscore.getText().toString());
+            String str=getString(R.string.suggestion);
+            if (("".equals(grade)) || ("".equals(grade))){ //﹃钩璶ノequalよΑ穦耞
+                if(score<=9){
+                    str+="厩だ计单9";
+                    str+=getString(R.string.sugguestion1);
+                }
+                else if((score<=15) && (score>9)){
+                    str+="厩だ计单15";
+                    str+=getString(R.string.sugguestion2);
+                }
+                else if((score<=25) && (score>15)){
+                    str+="厩だ计单25";
+                    str+=getString(R.string.sugguestion3);
+                }
+                else{
+                    str+="禬25厩だ!";
+                }
+            }
+            else if ("".equals(grade)){
+                if(score<=9){
+                    str+="厩だ计单9";
+                    str+=getString(R.string.sugguestion4);
+                }
+                else if((score<=15) && (score>9)){
+                    str+="厩だ计单15";
+                    str+=getString(R.string.sugguestion5);
+                }
+                else if((score<=25) && (score>15)){
+                    str+="厩だ计单25";
+                    str+=getString(R.string.sugguestion6);
+                }
+                else{
+                    str+="禬25厩だ!";
+                }
+            }
+            else if ("".equals(grade)){
+                if(score<=9){
+                    str+="厩だ计单9";
+                    str+=getString(R.string.sugguestion7);
+                }
+                else if((score<=15) && (score>9)){
+                    str+="厩だ计单15";
+                    str+=getString(R.string.sugguestion8);
+                }
+                else if((score<=25) && (score>15)){
+                    str+="厩だ计单25";
+                    str+=getString(R.string.sugguestion9);
+                }
+                else{
+                    str+="禬25厩だ!";
+                }
+            }
+            msuggestion.setText(str);
+        }
+    };
+    private AdapterView.OnItemSelectedListener spngradeon=new AdapterView.OnItemSelectedListener(){
+        public void onItemSelected(AdapterView<?>adapterView, View view,int i,long l){
+            grade=adapterView.getSelectedItem().toString();
+        }
+        public void onNothingSelected(AdapterView<?>adapterView){
+        }
+    };
+}

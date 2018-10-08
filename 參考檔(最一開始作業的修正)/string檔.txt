@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">01-04052474</string>
+    <string name="name">學習建議</string>
+    <string name="grade">年級</string>
+    <string name="grade_hint">(輸入年級)</string>
+    <string name="score">學分</string>
+    <string name="score_hint">(輸入所選學分數)</string>
+    <string name="button">確定</string>
+    <string name="suggestion">建議:</string>
+    <string name="sugguestion1">修太少課了</string>
+    <string name="sugguestion2">不多不少，努力吧</string>
+    <string name="sugguestion3">有點吃力喔，加油加油</string>
+    <string name="sugguestion4">有點少吧?</string>
+    <string name="sugguestion5">不多不少剛剛好</string>
+    <string name="sugguestion6">太拚了吧</string>
+    <string name="sugguestion7">爽爽過喔!</string>
+    <string name="sugguestion8">還行，穩穩地畢業</string>
+    <string name="sugguestion9">加油!!!!!!!!!!!!</string>
+
+    <string-array name="grade_list">
+        <item>一年級</item>
+        <item>二年級</item>
+        <item>三年級</item>
+        <item>四年級</item>
+    </string-array>
+    <string name="grade_list_prompt">請選擇年級</string>
+</resources>
